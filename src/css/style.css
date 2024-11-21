@@ -5,41 +5,69 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: #f3f4f6;
+  background: linear-gradient(45deg, #e0f7fa, #fce4ec);
 }
+
 .login-container {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 300px;
+  background:#eb050554 ;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
+  width: 300px;
 }
-.login-container h1 {
+
+h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
   margin-bottom: 20px;
-  font-size: 1.5em;
+  color: #666;
 }
-.login-container input {
+
+.input-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box;
 }
-.login-container button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button {
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
-.login-container button:hover {
-  background-color: #0056b3;
+
+.login-btn {
+  background: #110ebd;
+  color: #fff;
+  width: 100%;
 }
-.error {
-  color: red;
-  font-size: 0.9em;
+
+.secondary-btn {
   margin-top: 10px;
+  background: #0c99d1;
+  color: #fff;
+  width: 100%;
 }

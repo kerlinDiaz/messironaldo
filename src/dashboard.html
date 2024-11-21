@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta</title>
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+    <div class="roulette-container">
+        <h1>Ruleta mamalona</h1>
+
+        <!-- Sección para definir cuántos nombres ingresar -->
+        <div id="setup">
+            <label for="participantCount">¿Cuántos participantes? (mínimo 3)</label>
+            <input type="number" id="participantCount" min="3" placeholder="3 o más" required>
+            <button id="startInput">Establecer</button>
+        </div>
+
+        <!-- Sección para agregar nombres -->
+        <div id="nameInputSection" style="display: none;">
+            <p>Ingrese los nombres:</p>
+            <form id="nameForm">
+                <input type="text" id="nameInput" placeholder="Ingresa un nombre" required>
+                <button type="submit">Agregar Nombre</button>
+            </form>
+            <ul id="nameList"></ul>
+        </div>
+
+        <!-- Ruleta -->
+        <div class="wheel" style="display: none;">
+            <div class="spinner"></div>
+        </div>
+
+        <button id="spinButton" disabled style="display: none;">¡Girar!</button>
+        <p id="result" style="display: none;">Resultado: <span>---</span></p>
+    </div>
+    
+    <script src="./js/dashboard.js"></script>
+</body>
+</html>

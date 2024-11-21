@@ -3,37 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./css/style.css" rel="stylesheet">
     <title>THE BEST</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="login-container">
-        <h1>Iniciar Sesión</h1>
-        <form id="loginForm">
-          <input type="text" id="username" placeholder="Usuario" required>
-          <input type="password" id="password" placeholder="Contraseña" required>
-          <button type="submit">Entrar</button>
+        <h2>MESSIRONALDO</h2>
+        <p>Ingrese su Usuario y Contraseña</p>
+        <form id="login-form">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="@usuario" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="contraseña" required>
+                <button type="button" class="toggle-password"></button>
+            </div>
+            <button type="submit" class="login-btn">iniciar sesion</button>
         </form>
-        <div id="errorMessage" class="error"></div>
-      </div>
-    
-      <script>
-        document.getElementById('loginForm').addEventListener('submit', function (event) {
-          event.preventDefault(); // Evitar el envío del formulario
-    
-          // Obtener los valores del formulario
-          const username = document.getElementById('username').value;
-          const password = document.getElementById('password').value;
-    
-          // Validar credenciales (puedes cambiar esto para usar un backend)
-          if (username === "admin" && password === "1234") {
-            alert("Inicio de sesión exitoso");
-            // Redireccionar a otra página
-            window.location.href = "pagina.html";
-          } else {
-            document.getElementById('errorMessage').textContent = "Usuario o contraseña incorrectos";
-          }
-        });
-      </script>
+        <button id="forgot-password" class="secondary-btn">Olvide Contraseña</button>
+        <button id="sign-up" class="secondary-btn">Registrarse</button>
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>
