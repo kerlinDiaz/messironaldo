@@ -1,32 +1,39 @@
-<!doctype html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Awesome Capacitor App</title>
-    <meta
-      name="viewport"
-      content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="msapplication-tap-highlight" content="no" />
-
-    <script
-      type="module"
-      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"
-    ></script>
-
-    <link rel="icon" type="image/x-icon" href="./assets/icon/favicon.ico" />
-    <link rel="manifest" href="./manifest.json" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <meta name="theme-color" content="#31d53d" />
-  </head>
-  <body>
-    <capacitor-welcome></capacitor-welcome>
-
-    <script src="./js/capacitor-welcome.js" type="module"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <title>THE BEST</title>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+        <form id="loginForm">
+          <input type="text" id="username" placeholder="Usuario" required>
+          <input type="password" id="password" placeholder="Contraseña" required>
+          <button type="submit">Entrar</button>
+        </form>
+        <div id="errorMessage" class="error"></div>
+      </div>
+    
+      <script>
+        document.getElementById('loginForm').addEventListener('submit', function (event) {
+          event.preventDefault(); // Evitar el envío del formulario
+    
+          // Obtener los valores del formulario
+          const username = document.getElementById('username').value;
+          const password = document.getElementById('password').value;
+    
+          // Validar credenciales (puedes cambiar esto para usar un backend)
+          if (username === "admin" && password === "1234") {
+            alert("Inicio de sesión exitoso");
+            // Redireccionar a otra página
+            window.location.href = "pagina.html";
+          } else {
+            document.getElementById('errorMessage').textContent = "Usuario o contraseña incorrectos";
+          }
+        });
+      </script>
+</body>
 </html>
