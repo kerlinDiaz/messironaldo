@@ -1,0 +1,10 @@
+{
+  "appId": "com.mezyronaldo.app",
+  "appName": "mezyronaldo",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">mezyronaldo</string>
+    <string name="title_activity_main">mezyronaldo</string>
+    <string name="package_name">com.mezyronaldo.app</string>
+    <string name="custom_url_scheme">com.mezyronaldo.app</string>
+</resources>
